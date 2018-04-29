@@ -8,24 +8,33 @@ states = ['Alabama',    'Alaska',    'Arizona',    'Arkansas',    'California', 
 
 
 @app.route('/API/getUSStates', methods=['GET'])
-def get_all_states():
+def test():
 
 
     if request.method=='GET':
         return jsonify({'US States': states})
 
 @app.route('/API/getUSStates', methods=['POST'])
-def add_state():
-      error_message = 'WARNING !!!! You are adding an already present State !!'
+def create_task():
+      task2= {'Message': 'WARNING !!!! You are adding an already present State !!'}
       new_state =  request.json['list']
-     
-      
-      if new_state in states:
-          return jsonify(error_message)
+      states.append(new_state)
+      task = [new_state for new_state in states if new_state == states[0]]
+      if new_state in task:
+          return jsonify({'list': task2})
       else:
-          states.append(new_state)
           return jsonify({'new state':states})
             
           
+          
+       
+            
+
+
+    
+        
+            
+        
+
 if __name__ == '__main__':
     app.run(debug=True)
