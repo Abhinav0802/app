@@ -25,9 +25,9 @@ def create_task():
         'list': request.json['list']
        
     }
-    task2= {'Message': 'Already present bro !'}
+    task= {'Message': 'Already present bro !'}
     if states2 == states  :
-        return jsonify({'list': task2})
+        return jsonify({'list': task})
     else:
         states.append(states2)
         return jsonify({'new state': states})
