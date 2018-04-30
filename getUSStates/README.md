@@ -8,10 +8,10 @@ METHODS USED:
 GET | POST
 
 CALL EXAMPLES (WINDOWS CMD):
-GET
+GET:
 curl -i http://localhost:5000/API/getUSStates
 
-POST
+POST:
 curl -i -H "Content-Type: application/json" -X POST -d "{"""list""":"""Alaska"""}" http://localhost:5000/API/getUSStates
 
 GET REQUEST RESPONSE :
