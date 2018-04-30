@@ -6,14 +6,14 @@ states = ['Alabama',    'Alaska',    'Arizona',    'Arkansas',    'California', 
            
 
 
-#get
+#get_method
 @app.route('/API/getUSStates', methods=['GET'])
 def get_all_states():
 
 
     if request.method=='GET':
         return jsonify({'US States': states})
-#post
+#post_method
 @app.route('/API/getUSStates', methods=['POST'])
 def add_state():
       error_message = 'WARNING !!!! You are adding an already present State !!'
