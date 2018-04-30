@@ -1,5 +1,5 @@
 # REST Web Services using Python + Flask
-# Using POST and GET method
+# Using GET and POST method
 
 URL
  http://localhost:5000/API/getUSStates
